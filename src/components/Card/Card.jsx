@@ -18,6 +18,7 @@ import {
   LearnMoreBtn,
   HeartIcon,
   IconBtn,
+  HeartIconBlue,
 } from './Card.styled';
 
 const Card = ({
@@ -52,8 +53,11 @@ const Card = ({
     <Item>
       <CarImgWrap>
         <CarImg src={img} alt={make} />
-        <IconBtn>
-          <HeartIcon />
+        <IconBtn
+          onClick={!followStatus ? incrementFavorite : decrementFavorite}
+          type="button"
+        >
+          {!followStatus ? <HeartIcon /> : <HeartIconBlue/>}
         </IconBtn>
       </CarImgWrap>
       <InfoWrapper>
@@ -78,12 +82,6 @@ const Card = ({
           <SecondaryCarText>{firstFunctionality}</SecondaryCarText>
         </SecondaryInfo>
         <LearnMoreBtn>Learn more</LearnMoreBtn>
-        <button
-          onClick={!followStatus ? incrementFavorite : decrementFavorite}
-          type="button"
-        >
-          {!followStatus ? 'add' : 'almost added'}
-        </button>
       </InfoWrapper>
     </Item>
   );

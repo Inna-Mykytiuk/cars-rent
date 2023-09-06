@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { HiOutlineHeart } from 'react-icons/hi';
+import { HiHeart } from 'react-icons/hi';
 
 export const Item = styled.li`
   width: 274px;
@@ -137,5 +138,11 @@ export const HeartIcon = styled(HiOutlineHeart)`
   color: rgb(255 255 255 / 80%);
   width: 18px;
   height: 18px;
+`;
 
+export const HeartIconBlue = styled(HiHeart)`
+  display: block;
+  color: #3470FF;
+  width: 18px;
+  height: 18px;
 `;
