@@ -21,12 +21,10 @@ const Home = () => {
 
         <ContentWrapper>
           <HomeTextMain>
-            Welcome to TweetDeck Connect, allows cars to browse and interact
-            with Tweets cards!
+          Unlock the Road to Adventure with Our Car Rental Service!
           </HomeTextMain>
           <HomeTextSecondary>
-            This user-friendly interface enhances Tweets engagement and
-            simplifies the process of managing your Tweets network.
+          The ultimate solution for hassle-free car rentals! With a wide range of vehicles to choose from, our user-friendly interface simplifies the process of renting a car.
           </HomeTextSecondary>
         </ContentWrapper>
       </HomeWrapper>

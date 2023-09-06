@@ -1,12 +1,4 @@
 import styled from '@emotion/styled';
-const smallDeviceMediaQuery = '@media (max-width: 768px)';
-
-// breakpoints: {
-//   xs: '320px',
-//   s: '375px',
-//   m: '768px',
-//   l: '1440px'
-// },
 
 export const HomePage = styled.div`
   width: 100%;
@@ -15,9 +7,7 @@ export const HomePage = styled.div`
   justify-content: center;
 `;
 
-
 export const HomeSection = styled.section`
-  /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +20,6 @@ export const HomeSection = styled.section`
   @media (min-width: 1440px) {
     padding: 100px 0px;
   }
-
 `;
 
 export const HomeWrapper = styled.div`
@@ -44,21 +33,17 @@ export const HomeWrapper = styled.div`
     flex-direction: row;
     gap: 20px;
   }
-  /* @media (min-width: 1440px) {
-    padding: 40px 0px;
-  } */
 `;
-
 
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-    gap: 10px;
-    width: 320px;
+  gap: 10px;
+  width: 320px;
 
-    @media (min-width: 768px) {
-      gap: 20px;
+  @media (min-width: 768px) {
+    gap: 20px;
     width: 450px;
   }
   @media (min-width: 1440px) {
@@ -68,16 +53,13 @@ export const ContentWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-width: 100%;
-`
+  width: 100%;
+`;
 
 export const BlueCarImg = styled.img`
   display: block;
 
   max-width: 50%;
-  /* &:hover {
-    scale: 1.2;
-  } */
 
   @media (min-width: 768px) {
     display: block;
@@ -87,30 +69,38 @@ export const BlueCarImg = styled.img`
     display: block;
     width: 20%;
   }
-
 `;
 
 export const HomeTextMain = styled.h1`
   color: #fff;
   font-weight: bold;
   font-size: 28px;
+  line-height: 1.8;
+  text-shadow: 1px 1px 2px #5c5757;
+
 
   @media (min-width: 768px) {
-    font-size: 40px;
+    font-size: 46px;
+    line-height: 1.4;
   }
   @media (min-width: 1440px) {
     font-size: 56px;
-  margin-bottom: 40px;
+    line-height: 1.2;
   }
 `;
 
 export const HomeTextSecondary = styled.h2`
   color: #8392b6;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.8;
+  text-shadow: 1px 1px 2px #b7b0b0;
 
-  ${smallDeviceMediaQuery} {
-    font-size: 20px; /* Змінений розмір шрифта для маленьких пристроїв */
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.8;  }
+  @media (min-width: 1440px) {
+    font-size: 24px;
+    line-height: 1.8;
   }
 `;

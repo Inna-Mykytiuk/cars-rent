@@ -1,7 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import styled from '@emotion/styled';
-import { IoMdHome } from 'react-icons/io';
+import { BsFillCarFrontFill } from 'react-icons/bs';
 import { FaArrowLeft } from 'react-icons/fa';
+
 
 export const Nav = styled.nav`
   display: flex;
@@ -28,7 +29,6 @@ export const NavBlock = styled.ul`
 `;
 
 
-
 export const NavListItem = styled.li`
   margin: 0;
   padding: 0;
@@ -37,22 +37,30 @@ export const NavListItem = styled.li`
   align-items: center;
 `;
 
-export const GoBAckLink = styled(NavLink)`
+export const GoBackLink = styled(NavLink)`
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  svg {
+    fill: #8392b6;
+  }
+
+  &.active,
+  &:hover,
+  &:focus {
+    color: #fff;
+
+    svg {
+      fill: white;
+      border: 1px solid #fff;
+      box-shadow: rgb(231 222 221) 0px 0px 15px;
+    }
+  }
 `;
 
-// export const WrapperBtnFilter = styled.div`
-//   margin-top: 10px;
-//   position: absolute;
-//   left: -50%;
-//   transform: translateX(50%);
-//   display: flex;
-//   flex-direction: column;
-// `;
 
 export const ButtonFilters = styled.button`
   position: relative;
@@ -105,7 +113,7 @@ export const Link = styled(NavLink)`
   }
 `;
 
-export const HomeIcon = styled(IoMdHome)`
+export const HomeIcon = styled(BsFillCarFrontFill)`
   width: 20px;
   height: 20px;
   margin: 0;

@@ -2,7 +2,6 @@ import { LoadMoreBtn } from 'components/Buttons/Buttons';
 import CarList from 'components/ListCards/ListCards';
 import React, { useEffect, useState } from 'react';
 import { FilterSectionContainer } from './FilterSection.styled';
-import Container from 'components/Container/Container';
 
 const cardsPerPage = 8;
 
@@ -165,11 +164,11 @@ export const FilterSection = ({ data }) => {
             Search
           </button>
         </div>
-        {/* <div style={{ padding: '30px 40px' }}>
+        <div style={{ padding: '0' }}>
           <button type="button" onClick={reset}>
             Reset Filter
           </button>
-        </div> */}
+        </div>
       </div>
       <CarList cars={paginatedCars} />
       {filteredCars.length > 0 ? (

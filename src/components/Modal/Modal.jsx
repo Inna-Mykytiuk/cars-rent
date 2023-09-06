@@ -77,8 +77,8 @@ const Modal = ({
   const number = parseInt(match[0], 10);
 
   return createPortal(
-    <Backdrop onClick={onOverlay}>
-      <ModalContainer>
+    <Backdrop onClick={onOverlay} className="show">
+      <ModalContainer className="show">
         <ContentWrapper>
           <BtnClose type="button" aria-label="close button" onClick={onClose}>
             <CloseIcon />

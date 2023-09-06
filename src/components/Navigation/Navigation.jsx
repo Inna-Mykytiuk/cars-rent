@@ -4,11 +4,12 @@ import {
   Link,
   HomeIcon,
   NavListItem,
-  GoBAckLink,
+  GoBackLink,
   GoBackIcon,
   NavBlock
 } from './Navigation.styled';
 import { useLocation } from 'react-router-dom';
+// import logo from 'images/logo.png';
 
 const Navigation = () => {
   const location = useLocation();
@@ -33,16 +34,19 @@ const Navigation = () => {
         </NavBlock>
 
         {isCatalogOrFavoritePage && (
-          <GoBAckLink>
-            <Link to="/">
+          <GoBackLink to="/">
               <GoBackIcon />
-            </Link>
-          </GoBAckLink>
+          </GoBackLink>
         )}
 
         {isCatalogOrFavoritePage ? null : (
           <div style={{ width: '20px', height: '20px', padding: '11px' }}></div>
         )}
+        {/* <NavListItem>
+            <Link to="/">
+              <img src={logo} alt='logo'/>
+            </Link>
+          </NavListItem> */}
       </NavList>
     </Nav>
   );
