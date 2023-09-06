@@ -1,23 +1,24 @@
 {
   "files": {
     "main.css": "/cars-rent/static/css/main.9f427495.css",
-    "main.js": "/cars-rent/static/js/main.a836a0d8.js",
-    "static/js/815.e9476f90.chunk.js": "/cars-rent/static/js/815.e9476f90.chunk.js",
+    "main.js": "/cars-rent/static/js/main.98093d7d.js",
+    "static/js/815.bf642ce8.chunk.js": "/cars-rent/static/js/815.bf642ce8.chunk.js",
     "static/js/632.c4a66f02.chunk.js": "/cars-rent/static/js/632.c4a66f02.chunk.js",
-    "static/js/395.8268dc03.chunk.js": "/cars-rent/static/js/395.8268dc03.chunk.js",
+    "static/js/395.ee62d19e.chunk.js": "/cars-rent/static/js/395.ee62d19e.chunk.js",
     "static/js/873.c8546645.chunk.js": "/cars-rent/static/js/873.c8546645.chunk.js",
-    "static/js/752.5eff1c7d.chunk.js": "/cars-rent/static/js/752.5eff1c7d.chunk.js",
+    "static/js/752.9992bd95.chunk.js": "/cars-rent/static/js/752.9992bd95.chunk.js",
+    "static/media/blueCar.png": "/cars-rent/static/media/blueCar.aa6560339578571a7f71.png",
     "index.html": "/cars-rent/index.html",
     "main.9f427495.css.map": "/cars-rent/static/css/main.9f427495.css.map",
-    "main.a836a0d8.js.map": "/cars-rent/static/js/main.a836a0d8.js.map",
-    "815.e9476f90.chunk.js.map": "/cars-rent/static/js/815.e9476f90.chunk.js.map",
+    "main.98093d7d.js.map": "/cars-rent/static/js/main.98093d7d.js.map",
+    "815.bf642ce8.chunk.js.map": "/cars-rent/static/js/815.bf642ce8.chunk.js.map",
     "632.c4a66f02.chunk.js.map": "/cars-rent/static/js/632.c4a66f02.chunk.js.map",
-    "395.8268dc03.chunk.js.map": "/cars-rent/static/js/395.8268dc03.chunk.js.map",
+    "395.ee62d19e.chunk.js.map": "/cars-rent/static/js/395.ee62d19e.chunk.js.map",
     "873.c8546645.chunk.js.map": "/cars-rent/static/js/873.c8546645.chunk.js.map",
-    "752.5eff1c7d.chunk.js.map": "/cars-rent/static/js/752.5eff1c7d.chunk.js.map"
+    "752.9992bd95.chunk.js.map": "/cars-rent/static/js/752.9992bd95.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f427495.css",
-    "static/js/main.a836a0d8.js"
+    "static/js/main.98093d7d.js"
   ]
 }
