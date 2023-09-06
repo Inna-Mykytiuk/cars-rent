@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 const smallDeviceMediaQuery = '@media (max-width: 768px)';
-const bigDeviceMediaQuery = '@media (max-width: 1280px)';
+const bigDeviceMediaQuery = '@media (max-width: 1440px)';
 
 export const HomePage = styled.div`
   width: 100%;
@@ -24,7 +24,7 @@ export const HomeContainer = styled.div`
 
 
   ${bigDeviceMediaQuery} {
-    width: 500px;
+    width: 800px;
   }
   ${smallDeviceMediaQuery} {
     width: 320px;

@@ -73,13 +73,13 @@ export const FilterSection = ({ data }) => {
     setFilteredCars(arr);
     return arr;
   };
-  const reset = () => {
-    setModel('');
-    setPrice('');
-    setStartMiles('');
-    setEndMiles('');
-    setFilteredCars(data);
-  };
+  // const reset = () => {
+  //   setModel('');
+  //   setPrice('');
+  //   setStartMiles('');
+  //   setEndMiles('');
+  //   setFilteredCars(data);
+  // };
 
   const handleChangeModel = event => {
     setModel(event.target.value);
@@ -105,7 +105,7 @@ export const FilterSection = ({ data }) => {
   return (
     <>
       <div style={{ display: 'flex' }}>
-        <div style={{ padding: '30px 40px' }}>
+        <div style={{ padding: '0' }}>
           {' '}
           <label>
             Car brand{' '}
@@ -122,7 +122,7 @@ export const FilterSection = ({ data }) => {
             </select>
           </label>
         </div>
-        <div style={{ padding: '30px 40px' }}>
+        <div style={{ padding: '0' }}>
           <label>
             Price/ 1 hour{' '}
             <select
@@ -139,7 +139,7 @@ export const FilterSection = ({ data }) => {
           </label>
         </div>
 
-        <div style={{ padding: '30px 40px' }}>
+        <div style={{ padding: '0' }}>
           <label>
             Сar mileage / km{' '}
             <input
@@ -156,17 +156,17 @@ export const FilterSection = ({ data }) => {
             placeholder="to"
           />{' '}
         </div>
-        <div style={{ padding: '30px 40px' }}></div>
-        <div style={{ padding: '30px 40px' }}>
+        {/* <div style={{ padding: '30px 40px' }}></div> */}
+        <div style={{ padding: '0' }}>
           <button type="button" onClick={search}>
             Search
           </button>
         </div>
-        <div style={{ padding: '30px 40px' }}>
+        {/* <div style={{ padding: '30px 40px' }}>
           <button type="button" onClick={reset}>
             Reset Filter
           </button>
-        </div>
+        </div> */}
       </div>
       <CarList cars={paginatedCars} />
       {filteredCars.length > 0 ? (

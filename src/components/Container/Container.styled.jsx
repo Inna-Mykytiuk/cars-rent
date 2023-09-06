@@ -12,10 +12,10 @@ export const MainContainer = styled.div`
 
   ${bigDeviceMediaQuery} {
     padding: 0 10px;
-    max-width: 1200px;
+    max-width: 1440px;
   }
   ${smallDeviceMediaQuery} {
     padding: 0 10px;
-    max-width: 380px;
+    max-width: 420px;
   }
 `;
