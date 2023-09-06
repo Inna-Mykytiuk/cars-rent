@@ -74,13 +74,13 @@ export const FilterSection = ({ data }) => {
     setFilteredCars(arr);
     return arr;
   };
-  // const reset = () => {
-  //   setModel('');
-  //   setPrice('');
-  //   setStartMiles('');
-  //   setEndMiles('');
-  //   setFilteredCars(data);
-  // };
+  const reset = () => {
+    setModel('');
+    setPrice('');
+    setStartMiles('');
+    setEndMiles('');
+    setFilteredCars(data);
+  };
 
   const handleChangeModel = event => {
     setModel(event.target.value);
