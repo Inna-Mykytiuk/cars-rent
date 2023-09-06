@@ -2,6 +2,7 @@ import { LoadMoreBtn } from 'components/Buttons/Buttons';
 import CarList from 'components/ListCards/ListCards';
 import React, { useEffect, useState } from 'react';
 import { FilterSectionContainer } from './FilterSection.styled';
+import Container from 'components/Container/Container';
 
 const cardsPerPage = 8;
 
@@ -105,7 +106,8 @@ export const FilterSection = ({ data }) => {
   const totalPages = Math.ceil(filteredCars.length / cardsPerPage);
   return (
     <FilterSectionContainer >
-      <div style={{ display: 'flex' }}>
+    {/* <Container> */}
+    <div style={{ display: 'flex' }}>
         <div style={{ padding: '0' }}>
           {' '}
           <label>
@@ -175,6 +177,8 @@ export const FilterSection = ({ data }) => {
       ) : (
         <h4>no cars</h4>
       )}
+    {/* </Container> */}
+
     </FilterSectionContainer>
   );
 };

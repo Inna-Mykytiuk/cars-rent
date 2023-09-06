@@ -12,37 +12,41 @@ import { useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const location = useLocation();
+  const isCatalogOrFavoritePage = location.pathname === '/catalog' || location.pathname === '/favorites';
 
   return (
     <Nav>
       <NavList>
-      {(location.pathname === '/catalog' || location.pathname === '/favorites') && (
+        <NavBlock>
+          <NavListItem>
+            <Link to="/">
+              <HomeIcon />
+            </Link>
+          </NavListItem>
+
+          <NavListItem>
+            <Link to="/catalog">Catalogue</Link>
+          </NavListItem>
+          <NavListItem>
+            <Link to="/favorites">Favorites</Link>
+          </NavListItem>
+        </NavBlock>
+
+        {isCatalogOrFavoritePage && (
           <GoBAckLink>
             <Link to="/">
               <GoBackIcon />
             </Link>
           </GoBAckLink>
+        )}
 
-          )}
-          <NavBlock>
-
-        <NavListItem>
-          <Link to="/catalog">Catalogue</Link>
-        </NavListItem>
-        <NavListItem>
-          <Link to="/favorites">Favorites</Link>
-        </NavListItem>
-        <NavListItem>
-          <Link to="/">
-            <HomeIcon />
-          </Link>
-        </NavListItem>
-          </NavBlock>
-
-
+        {isCatalogOrFavoritePage ? null : (
+          <div style={{ width: '20px', height: '20px', padding: '11px' }}></div>
+        )}
       </NavList>
     </Nav>
   );
 };
 
 export default Navigation;
+

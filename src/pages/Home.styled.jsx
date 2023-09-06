@@ -1,6 +1,12 @@
 import styled from '@emotion/styled';
 const smallDeviceMediaQuery = '@media (max-width: 768px)';
-const bigDeviceMediaQuery = '@media (max-width: 1440px)';
+
+// breakpoints: {
+//   xs: '320px',
+//   s: '375px',
+//   m: '768px',
+//   l: '1440px'
+// },
 
 export const HomePage = styled.div`
   width: 100%;
@@ -9,38 +15,92 @@ export const HomePage = styled.div`
   justify-content: center;
 `;
 
-export const HomeContainer = styled.div`
-  flex: 1 1 0%;
+
+export const HomeSection = styled.section`
+  /* position: relative; */
   display: flex;
   flex-direction: column;
-  -webkit-box-align: center;
-  align-items: flex-start;
-  -webkit-box-pack: center;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  width: 600px;
-  margin-left: auto;
+  padding: 50px 0 0;
 
-
-  ${bigDeviceMediaQuery} {
-    width: 800px;
+  @media (min-width: 768px) {
+    padding: 80px 0 0;
   }
-  ${smallDeviceMediaQuery} {
+  @media (min-width: 1440px) {
+    padding: 100px 0px;
+  }
+
+`;
+
+export const HomeWrapper = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 20px;
+  }
+  /* @media (min-width: 1440px) {
+    padding: 40px 0px;
+  } */
+`;
+
+
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    gap: 10px;
     width: 320px;
-    align-items: center;
-    margin: 0;
+
+    @media (min-width: 768px) {
+      gap: 20px;
+    width: 450px;
   }
+  @media (min-width: 1440px) {
+    gap: 30px;
+    width: 600px;
+  }
+`;
+
+export const ImageWrapper = styled.div`
+width: 100%;
+`
+
+export const BlueCarImg = styled.img`
+  display: block;
+
+  max-width: 50%;
+  /* &:hover {
+    scale: 1.2;
+  } */
+
+  @media (min-width: 768px) {
+    display: block;
+    width: 30%;
+  }
+  @media (min-width: 1440px) {
+    display: block;
+    width: 20%;
+  }
+
 `;
 
 export const HomeTextMain = styled.h1`
   color: #fff;
   font-weight: bold;
-  font-size: 56px;
-  margin-bottom: 40px;
+  font-size: 28px;
 
-  ${smallDeviceMediaQuery} {
+  @media (min-width: 768px) {
     font-size: 40px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 56px;
+  margin-bottom: 40px;
   }
 `;
 

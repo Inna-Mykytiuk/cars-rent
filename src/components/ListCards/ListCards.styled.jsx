@@ -8,7 +8,7 @@ export const List = styled.ul`
   gap: 29px;
   flex-wrap: wrap;
   list-style: none;
-
+  width: 100%;
 `;
 
 export const ListItem = styled.div`
@@ -21,12 +21,9 @@ export const SectionContainer = styled.section`
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
-`;
-
-export const CardsContainer = styled.div`
-  display: flex;
   justify-content: center;
 `;
+
 
 export const Warning = styled.h3`
   padding: 16px 10px;

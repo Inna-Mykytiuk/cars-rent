@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardsContainer, SectionContainer } from './ListCards.styled';
+import { SectionContainer } from './ListCards.styled';
 
 
 import Card from '../Card/Card';
@@ -9,7 +9,6 @@ const CarList = ({cars}) => {
   return (
     <>
       <SectionContainer>
-        <CardsContainer>
           <List>
         {cars.map(car => (
           <ListItem key={car.id}>
@@ -37,7 +36,6 @@ const CarList = ({cars}) => {
 
         ))}
       </List>
-        </CardsContainer>
       </SectionContainer>
     </>
   );
