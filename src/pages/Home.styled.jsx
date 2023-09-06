@@ -63,11 +63,11 @@ export const BlueCarImg = styled.img`
 
   @media (min-width: 768px) {
     display: block;
-    width: 30%;
+    width: 40%;
   }
   @media (min-width: 1440px) {
     display: block;
-    width: 20%;
+    width: 30%;
   }
 `;
 
