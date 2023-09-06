@@ -1,19 +1,19 @@
 import React from 'react';
 import { CardsContainer, SectionContainer } from './ListCards.styled';
 
+
 import Card from '../Card/Card';
-import { List } from './ListCards.styled';
+import { List, ListItem } from './ListCards.styled';
 
 const CarList = ({cars}) => {
-
   return (
     <>
       <SectionContainer>
         <CardsContainer>
           <List>
         {cars.map(car => (
+          <ListItem key={car.id}>
           <Card
-          key={car.id}
           model={car.model}
           make={car.make}
           year={car.year}
@@ -25,7 +25,16 @@ const CarList = ({cars}) => {
           id={car.id}
           type={car.type}
           img={car?.img}
+          fuelConsumption={car.fuelConsumption}
+          engineSize={car.engineSize}
+          description={car.description}
+          accessories={car.accessories}
+          rentalConditions={car.rentalConditions}
+          mileage={car.mileage}
+
         />
+          </ListItem>
+
         ))}
       </List>
         </CardsContainer>

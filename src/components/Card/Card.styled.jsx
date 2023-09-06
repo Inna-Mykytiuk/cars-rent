@@ -2,14 +2,11 @@ import styled from '@emotion/styled';
 import { HiOutlineHeart } from 'react-icons/hi';
 import { HiHeart } from 'react-icons/hi';
 
-export const Item = styled.li`
+export const Item = styled.div`
   width: 274px;
   height: 426px;
   display: flex;
   flex-direction: column;
-  /* background-color: #fff; */
-  /* box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23); */
-  /* border-radius: 20px; */
 `;
 
 export const CarImgWrap = styled.div`
@@ -41,13 +38,13 @@ export const MainInfo = styled.div`
   line-height: 24px;
 `;
 
-export const CarInfo = styled.div`
+export const CarInfo = styled.ul`
   display: flex;
   width: 100%;
   gap: 5px;
 `;
 
-export const CarText = styled.div`
+export const CarText = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,6 +112,7 @@ export const LearnMoreBtn = styled.button`
   background: #3470ff;
   border: none;
   cursor: pointer;
+  outline: none;
   box-shadow: 0px 3.43693px 3.43693px 0px rgba(0, 0, 0, 0.25);
   margin-top: 28px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);

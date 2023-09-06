@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
 import {
   minusToFavoriteList,
   plusToFavoriteList,
 } from 'redux/favoriteSlice/slice';
+import Modal from 'components/Modal/Modal';
 
 import {
   CarImg,
@@ -32,10 +34,27 @@ const Card = ({
   rentalCompany,
   type,
   functionalities,
+  fuelConsumption,
+  engineSize,
+  description,
+  accessories,
+  rentalConditions,
+  mileage
 }) => {
   const dispatch = useDispatch();
   const favorite = useSelector(state => state.favorite);
   const followStatus = favorite.includes(id);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+
   const incrementFavorite = () => {
     dispatch(plusToFavoriteList(id));
   };
@@ -50,7 +69,8 @@ const Card = ({
   const firstFunctionality = functionalities[0];
 
   return (
-    <Item>
+
+      <Item>
       <CarImgWrap>
         <CarImg src={img} alt={make} />
         <IconBtn
@@ -81,9 +101,34 @@ const Card = ({
           <SecondaryCarText>{id}</SecondaryCarText>
           <SecondaryCarText>{firstFunctionality}</SecondaryCarText>
         </SecondaryInfo>
-        <LearnMoreBtn>Learn more</LearnMoreBtn>
+        <LearnMoreBtn onClick={openModal}>Learn more</LearnMoreBtn>
+        {isModalOpen && (
+          <Modal  onClose={closeModal} key={id}
+          model={model}
+          make={make}
+          year={year}
+          rentalPrice={rentalPrice}
+          address={address}
+          rentalCompany={rentalCompany}
+          functionalities={functionalities}
+          id={id}
+          type={type}
+          img={img}
+          fuelConsumption={fuelConsumption}
+          engineSize={engineSize}
+          description={description}
+          accessories={accessories}
+          rentalConditions={rentalConditions}
+          mileage={mileage}
+          />
+
+        )}
       </InfoWrapper>
+
     </Item>
+
+
+
   );
 };
 
