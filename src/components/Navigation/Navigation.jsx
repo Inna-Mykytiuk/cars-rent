@@ -36,14 +36,6 @@ const Navigation = () => {
             <GoBackIcon />
           </GoBackLink>
         )}
-        {isCatalogOrFavoritePage ? null : (
-          <div style={{ width: '20px', height: '20px', padding: '11px' }}></div>
-        )}
-        {/* <NavListItem>
-            <Link to="/">
-              <img src={logo} alt='logo'/>
-            </Link>
-          </NavListItem> */}
       </NavList>
     </Nav>
   );
