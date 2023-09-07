@@ -19,9 +19,6 @@ export const ButtonFollows = styled.button`
   &:hover {
     background: #0b44cd;
   }
-  /* background-color: ${({ bgColor }) =>
-    bgColor === false ? '#EBD8FF' : '#5CD3A8'};
-  border: none; */
 `;
 
 export const LearnMoreBtn = styled.button`

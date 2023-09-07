@@ -78,7 +78,6 @@ export const HomeTextMain = styled.h1`
   line-height: 1.8;
   text-shadow: 1px 1px 2px #5c5757;
 
-
   @media (min-width: 768px) {
     font-size: 46px;
     line-height: 1.4;
@@ -98,7 +97,8 @@ export const HomeTextSecondary = styled.h2`
 
   @media (min-width: 768px) {
     font-size: 18px;
-    line-height: 1.8;  }
+    line-height: 1.8;
+  }
   @media (min-width: 1440px) {
     font-size: 24px;
     line-height: 1.8;

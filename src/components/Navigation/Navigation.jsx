@@ -9,7 +9,6 @@ import {
   NavBlock
 } from './Navigation.styled';
 import { useLocation } from 'react-router-dom';
-// import logo from 'images/logo.png';
 
 const Navigation = () => {
   const location = useLocation();

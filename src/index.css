@@ -1,5 +1,5 @@
 @import-normalize;
- /* bring in normalize.css styles */
+/* bring in normalize.css styles */
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Manrope:wght@400;500;600&display=swap');
 
 html,
@@ -7,24 +7,42 @@ body {
   margin: 0;
   font-family: 'Manrope', sans-serif;
   background-color: #fff;
-
-  /* background: linear-gradient(to right, rgba(47, 48, 58, 0.1), rgba(47, 48, 58, 0.5)), url(https://images.unsplash.com/photo-1530569673472-307dc017a82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center; */
-  background: rgb(101,115,150);
-background: linear-gradient(180deg, rgba(101,115,150,1) 0%, rgba(255,255,255,1) 100%);
+  background: rgb(101, 115, 150);
+  background: linear-gradient(
+    180deg,
+    rgba(101, 115, 150, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 
   width: 100%;
   min-height: 100vh;
   letter-spacing: 0.02em;
   font-size: 14px;
-  /* line-height: 1.2; */
   overflow-x: hidden;
   margin: 0 auto;
   transition: 1.5s;
 
+  ::-webkit-scrollbar {
+    width: 18px;
+    height: 130px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: rgba(18, 20, 23, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #fff;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(
+      180deg,
+      rgba(101, 115, 150, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
 }
 
 code {
@@ -50,7 +68,8 @@ p {
   margin: 0px;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -63,18 +82,12 @@ a {
   margin: 0;
 }
 
-/* img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-} */
-
 img {
   display: block;
-    width: 100%;
-    max-width: 100%;
-    object-fit: cover;
-    object-position: center center;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 svg {

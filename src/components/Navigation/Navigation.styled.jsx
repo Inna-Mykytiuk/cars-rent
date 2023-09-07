@@ -3,11 +3,9 @@ import styled from '@emotion/styled';
 import { BsFillCarFrontFill } from 'react-icons/bs';
 import { FaArrowLeft } from 'react-icons/fa';
 
-
 export const Nav = styled.nav`
   display: flex;
   justify-content: center;
-  /* justify-content: center; */
   align-items: center;
   gap: 20px;
 `;
@@ -17,17 +15,21 @@ export const NavList = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-
 `;
 
 export const NavBlock = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
 
+  @media (min-width: 768px) {
+    gap: 30px;
+  }
+  @media (min-width: 1440px) {
+    gap: 30px;
+  }
 `;
-
 
 export const NavListItem = styled.li`
   margin: 0;
@@ -60,7 +62,6 @@ export const GoBackLink = styled(NavLink)`
     }
   }
 `;
-
 
 export const ButtonFilters = styled.button`
   position: relative;
