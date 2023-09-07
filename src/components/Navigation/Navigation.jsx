@@ -6,13 +6,14 @@ import {
   NavListItem,
   GoBackLink,
   GoBackIcon,
-  NavBlock
+  NavBlock,
 } from './Navigation.styled';
 import { useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const location = useLocation();
-  const isCatalogOrFavoritePage = location.pathname === '/catalog' || location.pathname === '/favorites';
+  const isCatalogOrFavoritePage =
+    location.pathname === '/catalog' || location.pathname === '/favorites';
 
   return (
     <Nav>
@@ -23,7 +24,6 @@ const Navigation = () => {
               <HomeIcon />
             </Link>
           </NavListItem>
-
           <NavListItem>
             <Link to="/catalog">Catalogue</Link>
           </NavListItem>
@@ -31,13 +31,11 @@ const Navigation = () => {
             <Link to="/favorites">Favorites</Link>
           </NavListItem>
         </NavBlock>
-
         {isCatalogOrFavoritePage && (
           <GoBackLink to="/">
-              <GoBackIcon />
+            <GoBackIcon />
           </GoBackLink>
         )}
-
         {isCatalogOrFavoritePage ? null : (
           <div style={{ width: '20px', height: '20px', padding: '11px' }}></div>
         )}
@@ -52,4 +50,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-

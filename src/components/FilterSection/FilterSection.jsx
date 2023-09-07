@@ -21,7 +21,7 @@ import {
   MileageInputWrapper,
   MileageInputLeft,
   MileageInputRight,
-  SearchBtn
+  SearchBtn,
 } from './FilterSection.styled';
 
 const cardsPerPage = 8;
@@ -156,16 +156,12 @@ export const FilterSection = ({ data }) => {
   const handleInputKeyPress = (event, field) => {
     if (event.key === 'Enter') {
       if (field === 'model') {
-        // Якщо це поле вводу моделі
         search();
       } else if (field === 'price') {
-        // Якщо це поле вводу ціни
         search();
       } else if (field === 'mileage') {
-        // Якщо це поле вводу пробігу
         search();
       }
-      // Додайте інші умови для інших полів, якщо необхідно
     }
   };
 
@@ -184,7 +180,7 @@ export const FilterSection = ({ data }) => {
             placeholder="Enter the text"
             onChange={handleChangeModel}
             value={model}
-            onKeyDown={(event) => handleInputKeyPress(event, 'model')}
+            onKeyDown={event => handleInputKeyPress(event, 'model')}
           />
           <ModelInputBtn type="button" onClick={() => toggleDropdown('model')}>
             {isDropdownOpen === 'model' ? <ArrowUp /> : <ArrowDown />}
@@ -211,7 +207,7 @@ export const FilterSection = ({ data }) => {
             placeholder="To $"
             onChange={handleChangePrice}
             value={price}
-            onKeyDown={(event) => handleInputKeyPress(event, 'price')}
+            onKeyDown={event => handleInputKeyPress(event, 'price')}
           />
           <PriceInputBtn type="button" onClick={() => toggleDropdown('price')}>
             {isDropdownOpen === 'price' ? <ArrowUp /> : <ArrowDown />}
@@ -239,28 +235,23 @@ export const FilterSection = ({ data }) => {
               placeholder="from"
               onChange={handleChangeStartMiles}
               value={startMiles}
-              onKeyDown={(event) => handleInputKeyPress(event, 'mileage')}
+              onKeyDown={event => handleInputKeyPress(event, 'mileage')}
             />
             <MileageInputRight
               type="number"
               value={endMiles}
               onChange={handleChangeEndMiles}
               placeholder="to"
-              onKeyDown={(event) => handleInputKeyPress(event, 'mileage')}
+              onKeyDown={event => handleInputKeyPress(event, 'mileage')}
             />
           </MileageInputWrapper>
         </InputBlock>
-
-        <div style={{ padding: '0' }}>
-          <SearchBtn type="button" onClick={search}>
-            Search
-          </SearchBtn>
-        </div>
-        <div style={{ padding: '0' }}>
-          <SearchBtn type="button" onClick={reset}>
-            Reset
-          </SearchBtn>
-        </div>
+        <SearchBtn type="button" onClick={search}>
+          Search
+        </SearchBtn>
+        <SearchBtn type="button" onClick={reset}>
+          Reset
+        </SearchBtn>
       </InputsBlock>
       <CarList cars={paginatedCars} />
       {filteredCars.length > 0 ? (

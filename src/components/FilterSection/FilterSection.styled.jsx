@@ -16,7 +16,6 @@ export const InputsBlock = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
-
   gap: 18px;
 `;
 
@@ -66,11 +65,11 @@ export const ModelDropdown = styled.div`
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #fff; /* Колір скролбара при наведенні */
+    background-color: #fff;
   }
 
   ::-webkit-scrollbar-track {
-    background-color: #fff; /* Колір фону доріжки скролбара */
+    background-color: #fff;
   }
 `;
 
@@ -137,7 +136,6 @@ export const ArrowDown = styled(FiChevronDown)`
   width: 20px;
   height: 20px;
   margin: 0;
-  /* padding: 10px; */
   color: #121417;
 `;
 
@@ -248,7 +246,6 @@ export const PriceInput = styled.input`
   }
 `;
 
-
 //-------------MileageInput
 
 export const MileageInputWrapper= styled.div`
@@ -288,6 +285,7 @@ export const MileageInputLeft = styled.input`
     padding: 14px 14px 14px 18px;
   }
 `;
+
 export const MileageInputRight = styled.input`
   display: flex;
   width: 100px;

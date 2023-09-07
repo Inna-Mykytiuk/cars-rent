@@ -24,7 +24,6 @@ export const SectionContainer = styled.section`
   justify-content: center;
 `;
 
-
 export const Warning = styled.h3`
   padding: 16px 10px;
   border-radius: 10px;

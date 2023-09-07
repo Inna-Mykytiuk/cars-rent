@@ -39,7 +39,7 @@ const Card = ({
   description,
   accessories,
   rentalConditions,
-  mileage
+  mileage,
 }) => {
   const dispatch = useDispatch();
   const favorite = useSelector(state => state.favorite);
@@ -53,7 +53,6 @@ const Card = ({
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
 
   const incrementFavorite = () => {
     dispatch(plusToFavoriteList(id));
@@ -69,15 +68,14 @@ const Card = ({
   const firstFunctionality = functionalities[0];
 
   return (
-
-      <Item>
+    <Item>
       <CarImgWrap>
         <CarImg src={img} alt={make} />
         <IconBtn
           onClick={!followStatus ? incrementFavorite : decrementFavorite}
           type="button"
         >
-          {!followStatus ? <HeartIcon /> : <HeartIconBlue/>}
+          {!followStatus ? <HeartIcon /> : <HeartIconBlue />}
         </IconBtn>
       </CarImgWrap>
       <InfoWrapper>
@@ -103,32 +101,29 @@ const Card = ({
         </SecondaryInfo>
         <LearnMoreBtn onClick={openModal}>Learn more</LearnMoreBtn>
         {isModalOpen && (
-          <Modal  onClose={closeModal} key={id}
-          model={model}
-          make={make}
-          year={year}
-          rentalPrice={rentalPrice}
-          address={address}
-          rentalCompany={rentalCompany}
-          functionalities={functionalities}
-          id={id}
-          type={type}
-          img={img}
-          fuelConsumption={fuelConsumption}
-          engineSize={engineSize}
-          description={description}
-          accessories={accessories}
-          rentalConditions={rentalConditions}
-          mileage={mileage}
+          <Modal
+            onClose={closeModal}
+            key={id}
+            model={model}
+            make={make}
+            year={year}
+            rentalPrice={rentalPrice}
+            address={address}
+            rentalCompany={rentalCompany}
+            functionalities={functionalities}
+            id={id}
+            type={type}
+            img={img}
+            fuelConsumption={fuelConsumption}
+            engineSize={engineSize}
+            description={description}
+            accessories={accessories}
+            rentalConditions={rentalConditions}
+            mileage={mileage}
           />
-
         )}
       </InfoWrapper>
-
     </Item>
-
-
-
   );
 };
 

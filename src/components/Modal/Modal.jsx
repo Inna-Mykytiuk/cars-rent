@@ -56,8 +56,6 @@ const Modal = ({
     };
     window.addEventListener('keydown', onKeyDown);
     return () => {
-      // document.body.style.overflow = 'scroll';
-
       window.removeEventListener('keydown', onKeyDown);
     };
   }, [onClose]);
