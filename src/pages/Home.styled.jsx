@@ -70,6 +70,7 @@ export const ContentWrapper = styled.div`
   gap: 10px;
   width: 320px;
   animation: ${slideLeftAnimation} 1s ease forwards;
+  text-align: center;
 
   @media (min-width: 768px) {
     gap: 20px;
@@ -107,6 +108,7 @@ export const HomeTextMain = styled.h1`
   font-size: 28px;
   line-height: 1.8;
   text-shadow: 1px 1px 2px #5c5757;
+
 
   @media (min-width: 768px) {
     font-size: 46px;

@@ -7,7 +7,6 @@ export const TopButton = styled.div`
   right: 15px;
   color: #abcdef;
   transition: 250ms;
-  /* z-index: 99; */
   cursor: pointer;
 
   &:hover,
@@ -46,14 +45,15 @@ export const ToTopBtn = styled(FaRegArrowAltCircleUp)`
   width: 100%;
   height: 100%;
   font-size: 40px;
-  /* z-index: 99; */
 
   @media screen and (max-width: 767px) {
     font-size: 28px;
   }
+
   @media screen and (min-width: 768px) {
     font-size: 35px;
   }
+
   @media screen and (min-width: 1200px) {
     font-size: 40px;
   }
@@ -65,7 +65,6 @@ export const ButtonFollows = styled.button`
   color: #fff;
   font-family: Manrope;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: 24px;
   border-radius: 12px;
@@ -87,7 +86,6 @@ export const LearnMoreBtn = styled.button`
   color: #fff;
   font-family: Manrope;
   font-size: 14px;
-  font-style: normal;
   font-weight: 600;
   line-height: 20px;
   border-radius: 12px;

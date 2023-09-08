@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import { LoadMoreBtn } from 'components/Buttons/Buttons';
 import NoCars from 'components/NoFollowers/NoCars';
 import CarList from 'components/ListCards/ListCards';
+import Loader from 'components/Loader/Loader';
 import {
   FilterSectionContainer,
   InputsBlock,
@@ -36,7 +37,7 @@ export const FilterSection = ({ data }) => {
   const [filteredCars, setFilteredCars] = useState([]);
   const [page, setPage] = useState(1);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [showNoCarsMessage, setShowNoCarsMessage] = useState(false);
+  const [showNoCarsMessage, setShowNoCarsMessage] = useState(false); //
 
   useEffect(() => {
     setFilteredCars(data);
@@ -77,7 +78,7 @@ export const FilterSection = ({ data }) => {
     if (model !== '') {
       if (!isBrandValid(model)) {
         toast.error('Car brand should contain only EN letters !');
-        return; // Повернення без виконання пошуку
+        return;
       }
       if (
         !modelOptions.find(
@@ -87,7 +88,7 @@ export const FilterSection = ({ data }) => {
         toast.error(
           `There is no car brand "${model}" in the list with this params!`
         );
-        return; // Повернення без виконання пошуку
+        return;
       }
 
       arr = arr.filter(
@@ -98,10 +99,10 @@ export const FilterSection = ({ data }) => {
     if (price !== '') {
       if (Number(price) < minPrice) {
         toast.warn(`Price cannot be less than ${minPrice}!`);
-        return; // Повернення без виконання пошуку
+        return;
       } else if (Number(price) > maxPrice) {
         toast.warn(`Price cannot be greater than ${maxPrice}!`);
-        return; // Повернення без виконання пошуку
+        return;
       }
       arr = arr
         .filter(
@@ -118,7 +119,7 @@ export const FilterSection = ({ data }) => {
 
     if (startMiles > endMiles && endMiles !== '') {
       toast.error('Пробіг вказаний невірно!');
-      return; // Повернення без виконання пошуку
+      return;
     }
 
     if (startMiles !== '' && endMiles !== '') {
@@ -128,7 +129,7 @@ export const FilterSection = ({ data }) => {
         toast.error(
           'Mileage must be an integer without decimals, in the range from 1000 to 6620!'
         );
-        return; // Повернення без виконання пошуку
+        return;
       }
       if (startMilesInt < 1000 || endMilesInt > 6620) {
         toast.error('Mileage should be in the range of 1000 to 6620!');
@@ -152,7 +153,7 @@ export const FilterSection = ({ data }) => {
     setFilteredCars(arr);
     if (model !== '' || price !== '' || startMiles !== '' || endMiles !== '') {
       if (filteredCars.length === 0) {
-        // Встановіть показник помилки, якщо немає знайдених машин
+
         setShowNoCarsMessage(true);
         toast.info('No cars matching your criteria found.');
       }
@@ -166,6 +167,7 @@ export const FilterSection = ({ data }) => {
     setStartMiles('');
     setEndMiles('');
     setFilteredCars(data);
+    setShowNoCarsMessage(false);
   };
 
   const handleChangeModel = event => {
@@ -234,7 +236,7 @@ export const FilterSection = ({ data }) => {
     }
   };
 
-  if (!data) return <h4>wait...</h4>;
+  if (!data) return <Loader/>
   const paginatedCars = filteredCars.slice(0, page * cardsPerPage);
   const getPage = () => setPage(page + 1);
   const totalPages = Math.ceil(filteredCars.length / cardsPerPage);
@@ -323,10 +325,11 @@ export const FilterSection = ({ data }) => {
         </SearchBtn>
       </InputsBlock>
       <CarList cars={paginatedCars} />
+      {showNoCarsMessage && <NoCars />}
       {filteredCars.length > 0 ? (
         totalPages !== page && <LoadMoreBtn onClick={getPage} />
       ) : (
-        <NoCars/>
+        <NoCars />
       )}
     </FilterSectionContainer>
   );

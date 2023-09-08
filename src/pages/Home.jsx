@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Slider } from 'components/Slider/Slider';
 import {
   HomeSection,
   HomeTextMain,
@@ -11,7 +12,7 @@ import {
 
 import blueCar from 'images/blueCar.png';
 
-const Home = () => {
+const Home = ({ data }) => {
   const [isAnimated, setIsAnimated] = useState(false);
 
   useEffect(() => {
@@ -23,6 +24,7 @@ const Home = () => {
       <HomeWrapper>
         <BlueCarImg src={blueCar} alt="blue car" animated={isAnimated}/>
         <ContentWrapper>
+        <Slider cars={data}/>
           <HomeTextMain>
             Unlock the Road to Adventure with Our Car Rental Service!
           </HomeTextMain>
