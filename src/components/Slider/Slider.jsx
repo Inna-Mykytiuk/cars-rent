@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { SlideContainer, Slide, SlideText, RightArrow, LeftArrow   } from './Slider.styled';
+import React, { useState, useEffect, useCallback } from 'react';
+import { SlideContainer, Slide, SlideText, RightArrow, LeftArrow  } from './Slider.styled';
 
 
 
@@ -13,10 +13,10 @@ export const Slider = ({ cars }) => {
     setActiveSlide(slide);
   }
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     const slide = activeSlide + 1 < cars.length ? activeSlide + 1 : 0;
     setActiveSlide(slide);
-  }
+  }, [activeSlide, cars.length]);
 
   const pause = () => {
     setAutoplay(false);
@@ -36,7 +36,7 @@ export const Slider = ({ cars }) => {
     return () => {
       clearInterval(timerId);
     };
-  }, [autoplay, activeSlide]);
+  }, [autoplay, activeSlide, nextSlide]);
 
   return (
     <SlideContainer onMouseEnter={pause} onMouseLeave={resume}>

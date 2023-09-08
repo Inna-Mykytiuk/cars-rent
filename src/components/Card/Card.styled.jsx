@@ -76,7 +76,6 @@ export const ButtonFollows = styled.button`
 
 export const SecondaryInfo = styled.div`
   display: flex;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
   align-items: center;
   color: rgba(18, 20, 23, 0.5);
@@ -93,10 +92,7 @@ export const SecondaryCarText = styled.div`
   font-weight: 400;
   line-height: 18px;
   border-right: 1px solid rgba(18, 20, 23, 0.2);
-  /* border-color: rgba(18, 20, 23, 0.5); */
   padding-right: 4px;
-
-  /* margin-right: 3px; */
 `;
 
 export const LearnMoreBtn = styled.button`
@@ -129,7 +125,7 @@ export const IconBtn = styled.button`
   border: none;
   cursor: pointer;
   background-color: transparent;
-`
+`;
 
 export const HeartIcon = styled(HiOutlineHeart)`
   display: block;
@@ -140,7 +136,7 @@ export const HeartIcon = styled(HiOutlineHeart)`
 
 export const HeartIconBlue = styled(HiHeart)`
   display: block;
-  color: #3470FF;
+  color: #3470ff;
   width: 18px;
   height: 18px;
 `;

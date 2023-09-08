@@ -153,7 +153,6 @@ export const FilterSection = ({ data }) => {
     setFilteredCars(arr);
     if (model !== '' || price !== '' || startMiles !== '' || endMiles !== '') {
       if (filteredCars.length === 0) {
-
         setShowNoCarsMessage(true);
         toast.info('No cars matching your criteria found.');
       }
@@ -236,7 +235,7 @@ export const FilterSection = ({ data }) => {
     }
   };
 
-  if (!data) return <Loader/>
+  if (!data) return <Loader />;
   const paginatedCars = filteredCars.slice(0, page * cardsPerPage);
   const getPage = () => setPage(page + 1);
   const totalPages = Math.ceil(filteredCars.length / cardsPerPage);
