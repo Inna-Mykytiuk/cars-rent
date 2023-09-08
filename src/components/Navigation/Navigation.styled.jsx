@@ -47,7 +47,7 @@ export const GoBackLink = styled(NavLink)`
   align-items: center;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   svg {
-    fill: #8392b6;
+    fill: #7b9ed9;
   }
 
   &.active,
@@ -57,8 +57,8 @@ export const GoBackLink = styled(NavLink)`
 
     svg {
       fill: white;
-      border: 1px solid #fff;
-      box-shadow: rgb(231 222 221) 0px 0px 15px;
+      border: 3px solid #fff;
+      box-shadow: rgb(188 221 244) 0px 0px 15px
     }
   }
 `;
@@ -87,7 +87,7 @@ export const Link = styled(NavLink)`
   font-size: 20px;
   line-height: 1.2;
   font-weight: 600;
-  color: #8392b6;
+  color: #7b9ed9;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -98,7 +98,7 @@ export const Link = styled(NavLink)`
   text-shadow: 2px 2px 5px #1d1e26;
 
   svg {
-    fill: #8392b6;
+    fill: #7b9ed9;
   }
 
   &.active,
@@ -108,8 +108,8 @@ export const Link = styled(NavLink)`
 
     svg {
       fill: white;
-      border: 1px solid #fff;
-      box-shadow: rgb(231 222 221) 0px 0px 15px;
+      border: 3px solid #fff;
+      box-shadow: rgb(188 221 244) 0px 0px 15px
     }
   }
 `;
@@ -120,14 +120,14 @@ export const HomeIcon = styled(BsFillCarFrontFill)`
   margin: 0;
   padding: 10px;
 
-  color: #99bfc8;
+  color: #7b9ed9;
   border-radius: 50%;
-  border: 1px solid #99bfc8;
+  border: 3px solid #7b9ed9;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: rgb(231 222 221) 0px 0px 15px;
+  box-shadow: rgb(188 221 244) 0px 0px 15px
 `;
 
 export const GoBackIcon = styled(FaArrowLeft)`
@@ -136,12 +136,12 @@ export const GoBackIcon = styled(FaArrowLeft)`
   margin: 0;
   padding: 10px;
 
-  color: #99bfc8;
+  color: #7b9ed9;
   border-radius: 50%;
-  border: 1px solid #99bfc8;
+  border: 3px solid #7b9ed9;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: rgb(231 222 221) 0px 0px 15px;
+  box-shadow: rgb(188 221 244) 0px 0px 15px
 `;

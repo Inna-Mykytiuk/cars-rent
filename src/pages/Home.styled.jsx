@@ -1,4 +1,32 @@
 import styled from '@emotion/styled';
+import { keyframes, css } from '@emotion/react';
+
+// Оголошуємо ключові кадри для анімації
+const slideInAnimation = keyframes`
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+const slideLeftAnimation = keyframes`
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const slideIn = css`
+  animation: ${slideInAnimation} 1s ease forwards;
+`;
 
 export const HomePage = styled.div`
   width: 100%;
@@ -41,6 +69,7 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   gap: 10px;
   width: 320px;
+  animation: ${slideLeftAnimation} 1s ease forwards;
 
   @media (min-width: 768px) {
     gap: 20px;
@@ -58,6 +87,7 @@ export const ImageWrapper = styled.div`
 
 export const BlueCarImg = styled.img`
   display: block;
+  ${props => props.animated && slideIn}
 
   max-width: 50%;
 

@@ -1,6 +1,8 @@
-import { LoadMoreBtn } from 'components/Buttons/Buttons';
-import CarList from 'components/ListCards/ListCards';
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+import { LoadMoreBtn } from 'components/Buttons/Buttons';
+import NoCars from 'components/NoFollowers/NoCars';
+import CarList from 'components/ListCards/ListCards';
 import {
   FilterSectionContainer,
   InputsBlock,
@@ -34,23 +36,11 @@ export const FilterSection = ({ data }) => {
   const [filteredCars, setFilteredCars] = useState([]);
   const [page, setPage] = useState(1);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [showNoCarsMessage, setShowNoCarsMessage] = useState(false);
 
   useEffect(() => {
     setFilteredCars(data);
   }, [data]);
-
-  function findMaxNumber(arr) {
-    if (arr.length === 0) {
-      return undefined;
-    }
-    let max = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-      if (arr[i] > max) {
-        max = arr[i];
-      }
-    }
-    return Math.ceil(max / 10) * 10;
-  }
 
   function createArrayWithStep(number, step) {
     const resultArray = [];
@@ -72,23 +62,53 @@ export const FilterSection = ({ data }) => {
     })
     .map(item => ({ label: item.make, value: item.make }));
 
-  const priceOptions = createArrayWithStep(
-    findMaxNumber(
-      filteredCars.map(({ rentalPrice }) => {
-        return Number(rentalPrice.substr(1));
-      })
-    ),
-    30
-  ).map(item => ({ label: item, value: item }));
+  const minPrice = 30;
+  const maxPrice = 500;
+  const step = 10;
+  const priceOptions = createArrayWithStep(maxPrice, step)
+    .filter(item => item >= minPrice)
+    .map(item => ({ label: item, value: item }));
 
   const search = () => {
+    setShowNoCarsMessage(false);
+    const isBrandValid = model => /^[a-zA-Z\s]+$/i.test(model);
     let arr = data;
-    if (model !== '') arr = arr.filter(({ make }) => make === model);
 
-    if (price !== '')
+    if (model !== '') {
+      if (!isBrandValid(model)) {
+        toast.error('Car brand should contain only EN letters !');
+        return; // Повернення без виконання пошуку
+      }
+      if (
+        !modelOptions.find(
+          option => option.label.toLowerCase() === model.toLowerCase()
+        )
+      ) {
+        toast.error(
+          `There is no car brand "${model}" in the list with this params!`
+        );
+        return; // Повернення без виконання пошуку
+      }
+
       arr = arr.filter(
-        ({ rentalPrice }) => Number(rentalPrice.substr(1)) <= Number(price)
+        ({ make }) => make.toLowerCase() === model.toLowerCase()
       );
+    }
+
+    if (price !== '') {
+      if (Number(price) < minPrice) {
+        toast.warn(`Price cannot be less than ${minPrice}!`);
+        return; // Повернення без виконання пошуку
+      } else if (Number(price) > maxPrice) {
+        toast.warn(`Price cannot be greater than ${maxPrice}!`);
+        return; // Повернення без виконання пошуку
+      }
+      arr = arr
+        .filter(
+          ({ rentalPrice }) => Number(rentalPrice.substr(1)) <= Number(price)
+        )
+        .sort((a, b) => a.rentalPrice - b.rentalPrice);
+    }
 
     if (startMiles === '' && endMiles !== '')
       arr = arr.filter(({ mileage }) => mileage <= endMiles);
@@ -96,16 +116,47 @@ export const FilterSection = ({ data }) => {
     if (startMiles !== '' && endMiles === '')
       arr = arr.filter(({ mileage }) => mileage >= startMiles);
 
-    if (startMiles > endMiles && endMiles !== '')
-      alert('Пробіг вказаний невірно!');
+    if (startMiles > endMiles && endMiles !== '') {
+      toast.error('Пробіг вказаний невірно!');
+      return; // Повернення без виконання пошуку
+    }
 
     if (startMiles !== '' && endMiles !== '') {
+      const startMilesInt = parseInt(startMiles, 10);
+      const endMilesInt = parseInt(endMiles, 10);
+      if (!Number.isInteger(startMilesInt) || !Number.isInteger(endMilesInt)) {
+        toast.error(
+          'Mileage must be an integer without decimals, in the range from 1000 to 6620!'
+        );
+        return; // Повернення без виконання пошуку
+      }
+      if (startMilesInt < 1000 || endMilesInt > 6620) {
+        toast.error('Mileage should be in the range of 1000 to 6620!');
+        return;
+      }
       arr = arr.filter(
         ({ mileage }) => mileage >= startMiles && mileage <= endMiles
       );
     }
-    arr.sort((a, b) => a.mileage - b.mileage);
+    arr.sort((a, b) => {
+      const priceA = Number(a.rentalPrice.substr(1));
+      const priceB = Number(b.rentalPrice.substr(1));
+
+      if (priceA === priceB) {
+        return a.mileage - b.mileage;
+      }
+
+      return priceA - priceB;
+    });
+
     setFilteredCars(arr);
+    if (model !== '' || price !== '' || startMiles !== '' || endMiles !== '') {
+      if (filteredCars.length === 0) {
+        // Встановіть показник помилки, якщо немає знайдених машин
+        setShowNoCarsMessage(true);
+        toast.info('No cars matching your criteria found.');
+      }
+    }
     return arr;
   };
 
@@ -160,6 +211,24 @@ export const FilterSection = ({ data }) => {
       } else if (field === 'price') {
         search();
       } else if (field === 'mileage') {
+        const startMilesInt = parseInt(startMiles, 10);
+        const endMilesInt = parseInt(endMiles, 10);
+
+        if (
+          !Number.isInteger(startMilesInt) ||
+          !Number.isInteger(endMilesInt)
+        ) {
+          toast.error(
+            'Mileage must be an integer without decimals, in the range from 1000 to 6620!'
+          );
+          return;
+        }
+
+        if (startMilesInt < 1000 || endMilesInt > 6620) {
+          toast.error('Mileage should be in the range of 1000 to 6620!');
+          return;
+        }
+
         search();
       }
     }
@@ -257,7 +326,7 @@ export const FilterSection = ({ data }) => {
       {filteredCars.length > 0 ? (
         totalPages !== page && <LoadMoreBtn onClick={getPage} />
       ) : (
-        <h4>no cars</h4>
+        <NoCars/>
       )}
     </FilterSectionContainer>
   );

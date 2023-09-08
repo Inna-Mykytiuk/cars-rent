@@ -4,15 +4,15 @@ import {
   SectionContainer,
   NoFollowImg,
   NoFollowText,
-} from './NoFollowers.styled';
+} from './NoCars.styled';
 
-const NoFollowers = () => {
+const NoCars = () => {
   return (
     <SectionContainer>
-      <NoFollowText>No followed cars</NoFollowText>
+      <NoFollowText>No cars avaible</NoFollowText>
       <NoFollowImg src={myImage} alt="Моя картинка" />
     </SectionContainer>
   );
 };
 
-export default NoFollowers;
+export default NoCars;

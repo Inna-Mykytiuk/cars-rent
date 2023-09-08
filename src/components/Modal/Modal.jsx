@@ -29,6 +29,14 @@ import {
 
 const modalRoot = document.querySelector('#modal-root');
 
+const toggleBodyOverflow = (toggle) => {
+  if (toggle) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
+};
+
 const Modal = ({
   onClose,
   model,
@@ -48,7 +56,7 @@ const Modal = ({
   mileage,
 }) => {
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    toggleBodyOverflow(true);
     const onKeyDown = event => {
       if (event.code === 'Escape') {
         onClose();
@@ -56,6 +64,7 @@ const Modal = ({
     };
     window.addEventListener('keydown', onKeyDown);
     return () => {
+      toggleBodyOverflow(false);
       window.removeEventListener('keydown', onKeyDown);
     };
   }, [onClose]);

@@ -20,28 +20,63 @@ export const ModalContainer = styled.div`
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 24px;
-  padding: 40px;
+  padding: 15px;
+  max-width: 320px;
+  z-index: 100;
+
   border-radius: 24px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  @media (min-width: 768px) {
+    padding: 30px;
+    max-width: 100%;
+  }
+  @media (min-width: 1440px) {
+    padding: 40px;
+    max-width: 100%;
+  }
 `;
 
 export const BtnClose = styled.button`
   position: absolute;
   color: black;
-  top: -30px;
-  right: -20px;
+  top: -12px;
+  right: 0px;
   background-color: transparent;
-  width: 24px;
-  height: 24px;
+  width: 10px;
+  height: 10px;
   border: none;
   cursor: pointer;
+  @media (min-width: 768px) {
+    top: -22px;
+  right: -12px;
+  width: 20px;
+  height: 20px;
+  }
+  @media (min-width: 1440px) {
+    top: -30px;
+    right: -20px;
+    width: 24px;
+  height: 24px;
+  }
 `;
 
 export const CloseIcon = styled(MdClose)`
   display: block;
   color: #121417;
-  width: 24px;
+  width: 14px;
+  height: 14px;
+  @media (min-width: 768px) {
+    top: -22px;
+  right: -12px;
+  width: 20px;
+  height: 20px;
+  }
+  @media (min-width: 1440px) {
+    top: -30px;
+    right: -20px;
+    width: 24px;
   height: 24px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -49,7 +84,14 @@ export const ContentWrapper = styled.div`
 
   background-color: white;
   border-radius: 24px;
-  width: 461px;
+
+
+  @media (min-width: 768px) {
+    width: 461px;
+  }
+  @media (min-width: 1440px) {
+    width: 461px;
+  }
 `;
 
 export const CarImg = styled.img`
@@ -180,11 +222,17 @@ export const RentalTitle = styled.p`
 `;
 
 export const RentalInfo = styled.ul`
-  width: 400px;
+  width: 320px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 24px;
+  @media (min-width: 768px) {
+    max-width: 100%;
+  }
+  @media (min-width: 1440px) {
+    max-width: 100%;
+  }
 `;
 
 export const RentalItem = styled.li`
