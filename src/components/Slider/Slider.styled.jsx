@@ -9,7 +9,7 @@ display: none;
   border-radius: 14px;
   @media (min-width: 768px) {
     display: block;
-    
+
   }
   @media (min-width: 1440px) {
     display: block;
@@ -35,7 +35,7 @@ export const Slide = styled.div`
 export const SlideText = styled.div`
   position: absolute;
     background: rgba(0, 0, 0, 0.6);
-    bottom: 10px;
+    top: 10px;
     padding: 5px;
     right: 10px;
     text-transform: uppercase;
@@ -71,12 +71,3 @@ export const LeftArrow = styled.div`
   }
 `;
 
-export const CarImg = styled.img`
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  width: 461px;
-  height: 248px;
-  object-fit: cover;
-  border-radius: 14px;
-`;

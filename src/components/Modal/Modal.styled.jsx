@@ -48,15 +48,15 @@ export const BtnClose = styled.button`
   cursor: pointer;
   @media (min-width: 768px) {
     top: -22px;
-  right: -12px;
-  width: 20px;
-  height: 20px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
   }
   @media (min-width: 1440px) {
     top: -30px;
     right: -20px;
     width: 24px;
-  height: 24px;
+    height: 24px;
   }
 `;
 
@@ -67,15 +67,15 @@ export const CloseIcon = styled(MdClose)`
   height: 14px;
   @media (min-width: 768px) {
     top: -22px;
-  right: -12px;
-  width: 20px;
-  height: 20px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
   }
   @media (min-width: 1440px) {
     top: -30px;
     right: -20px;
     width: 24px;
-  height: 24px;
+    height: 24px;
   }
 `;
 
@@ -84,7 +84,6 @@ export const ContentWrapper = styled.div`
 
   background-color: white;
   border-radius: 24px;
-
 
   @media (min-width: 768px) {
     width: 461px;

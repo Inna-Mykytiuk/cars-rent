@@ -29,7 +29,7 @@ import {
 
 const modalRoot = document.querySelector('#modal-root');
 
-const toggleBodyOverflow = (toggle) => {
+const toggleBodyOverflow = toggle => {
   if (toggle) {
     document.body.style.overflow = 'hidden';
   } else {

@@ -1,7 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { SlideContainer, Slide, SlideText, RightArrow, LeftArrow  } from './Slider.styled';
-
-
+import { FaArrowCircleRight, FaArrowCircleLeft } from 'react-icons/fa';
+import {
+  SlideContainer,
+  Slide,
+  SlideText,
+  RightArrow,
+  LeftArrow,
+} from './Slider.styled';
 
 export const Slider = ({ cars }) => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -11,7 +16,7 @@ export const Slider = ({ cars }) => {
   const prevSlide = () => {
     const slide = activeSlide - 1 < 0 ? cars.length - 1 : activeSlide - 1;
     setActiveSlide(slide);
-  }
+  };
 
   const nextSlide = useCallback(() => {
     const slide = activeSlide + 1 < cars.length ? activeSlide + 1 : 0;
@@ -20,11 +25,11 @@ export const Slider = ({ cars }) => {
 
   const pause = () => {
     setAutoplay(false);
-  }
+  };
 
   const resume = () => {
     setAutoplay(true);
-  }
+  };
 
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -49,8 +54,13 @@ export const Slider = ({ cars }) => {
           <SlideText>{car.make}</SlideText>
         </Slide>
       ))}
-      <RightArrow onClick={nextSlide}><i className="fa fa-4x fa-arrow-circle-right"></i></RightArrow>
-      <LeftArrow onClick={prevSlide}> <i className="fa fa-4x fa-arrow-circle-left"></i></LeftArrow>
+      <RightArrow onClick={nextSlide}>
+        <FaArrowCircleRight style={{ width: '30px', height: '30px' }} />
+      </RightArrow>
+      <LeftArrow onClick={prevSlide}>
+        {' '}
+        <FaArrowCircleLeft style={{ width: '30px', height: '30px' }} />
+      </LeftArrow>
     </SlideContainer>
   );
-}
+};
