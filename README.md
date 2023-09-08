@@ -23,10 +23,5 @@ No Cars Available: On the Favorites page, if you haven't added any cars to your 
 Car Rental Service makes renting a car a breeze, offering a user-friendly interface and a rich set of features to enhance your car rental experience. Whether you're looking for a specific car brand, affordable pricing, or low mileage options, our app has you covered. Unlock the road to adventure today with Car Rental Service!
 
 
-<!-- ![preview](https://github.com/Inna-Mykytiuk/tweet-cards/blob/main/assets/tweets.jpg) -->
-https://github.com/Inna-Mykytiuk/cars-rent/blob/main/assets/preview1.jpg
-[preview](https://github.com/Inna-Mykytiuk/cars-rent/blob/main/assets/preview1.jpg)
-[preview](https://github.com/Inna-Mykytiuk/cars-rent/blob/main/assets/preview2.jpg)
-
 
 
