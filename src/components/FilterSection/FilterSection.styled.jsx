@@ -7,7 +7,14 @@ export const FilterSectionContainer = styled.section`
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0px 80px;
+  padding: 30px 0px 80px;
+  @media (min-width: 768px) {
+    padding: 40px 0px 80px;
+  }
+  @media (min-width: 1440px) {
+    padding: 50px 0px 80px;
+  }
+
 `;
 
 export const InputsBlock = styled.div`
