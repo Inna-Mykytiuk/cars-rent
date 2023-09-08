@@ -133,7 +133,8 @@ export const HomeIcon = styled(BsFillCarFrontFill)`
 export const GoBackIcon = styled(FaArrowLeft)`
   width: 20px;
   height: 20px;
-  margin: 0;
+  margin: 10px;
+
   padding: 10px;
 
   color: #7b9ed9;
@@ -144,4 +145,11 @@ export const GoBackIcon = styled(FaArrowLeft)`
   align-items: center;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: rgb(188 221 244) 0px 0px 15px;
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+  @media (min-width: 1440px) {
+    margin: 0;
+  }
 `;
