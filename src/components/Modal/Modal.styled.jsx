@@ -186,7 +186,6 @@ export const AccessoriesTitle = styled.p`
 
 export const AccessoryList = styled.ul`
   display: flex;
-  /* width: 300px; */
   flex-wrap: wrap;
   align-items: center;
   color: rgba(18, 20, 23, 0.5);
@@ -195,7 +194,6 @@ export const AccessoryList = styled.ul`
   font-weight: 400;
   line-height: 18px;
   gap: 3px;
-  /* margin-bottom: 14px; */
 `;
 
 export const AccessoryListItem = styled.li`
@@ -227,10 +225,10 @@ export const RentalInfo = styled.ul`
   gap: 8px;
   margin-bottom: 24px;
   @media (min-width: 768px) {
-    max-width: 100%;
+    width: 100%;
   }
   @media (min-width: 1440px) {
-    max-width: 100%;
+    width: 100%;
   }
 `;
 
