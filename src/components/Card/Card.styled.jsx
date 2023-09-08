@@ -109,11 +109,19 @@ export const LearnMoreBtn = styled.button`
   border: none;
   cursor: pointer;
   outline: none;
+  margin-top: 18px;
   box-shadow: 0px 3.43693px 3.43693px 0px rgba(0, 0, 0, 0.25);
-  margin-top: 28px;
+
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     background: #0b44cd;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 24px;
+  }
+  @media (min-width: 1440px) {
+    margin-top: 28px;
   }
 `;
 
