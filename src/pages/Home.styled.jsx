@@ -39,7 +39,7 @@ export const HomeSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 0 0;
+  padding: 30px 0 0;
 
   @media (min-width: 768px) {
     padding: 80px 0 0;
@@ -105,7 +105,7 @@ export const HomeTextMain = styled.h1`
   color: #fff;
   font-weight: bold;
   font-size: 28px;
-  line-height: 1.8;
+  line-height: 1.6;
   text-shadow: 1px 1px 2px #5c5757;
 
 
@@ -123,7 +123,7 @@ export const HomeTextSecondary = styled.h2`
   color: #8392b6;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.4;
   text-shadow: 1px 1px 2px #b7b0b0;
 
   @media (min-width: 768px) {

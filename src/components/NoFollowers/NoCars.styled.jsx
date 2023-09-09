@@ -5,6 +5,7 @@ export const SectionContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 `;
 
 export const NoFollowImg = styled.img`
