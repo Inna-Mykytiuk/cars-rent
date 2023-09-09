@@ -118,7 +118,7 @@ export const FilterSection = ({ data }) => {
       arr = arr.filter(({ mileage }) => mileage >= startMiles);
 
     if (startMiles > endMiles && endMiles !== '') {
-      toast.error('Пробіг вказаний невірно!');
+      toast.error('Mileage is incorrect!');
       return;
     }
 
