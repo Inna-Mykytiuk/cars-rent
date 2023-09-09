@@ -24,4 +24,4 @@ Car Rental Service makes renting a car a breeze, offering a user-friendly interf
 
 
 ![preview](https://github.com/Inna-Mykytiuk/cars-rent/blob/main/assets/preview1.jpg)
-![preview](https://github.com/Inna-Mykytiuk/cars-rent/blob/main/assets/preview3.jpg)
+![preview](https://github.com/Inna-Mykytiuk/cars-rent/blob/main/assets/preview2.jpg)
