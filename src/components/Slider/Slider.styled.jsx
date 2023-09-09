@@ -50,11 +50,13 @@ export const RightArrow = styled.div`
   z-index: 200;
   transition: all 0.2s ease-in-out;
   color: rgba(160, 192, 255, 0.8);
+  cursor: pointer;
 
   &:hover {
     color: rgba(160, 192, 255, 0.5);
     transform: scale(1.1);
   }
+
 `;
 
 export const LeftArrow = styled.div`
@@ -64,6 +66,7 @@ export const LeftArrow = styled.div`
   z-index: 200;
   transition: all 0.2s ease-in-out;
   color: rgba(160, 192, 255, 1);
+  cursor: pointer;
 
   &:hover {
     color: rgba(160, 192, 255, 0.5);
