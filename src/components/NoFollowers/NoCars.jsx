@@ -9,7 +9,7 @@ import {
 const NoCars = () => {
   return (
     <SectionContainer>
-      <NoFollowText>No cars avaible</NoFollowText>
+      <NoFollowText>No cars available</NoFollowText>
       <NoFollowImg src={carSet} alt="Моя картинка" />
     </SectionContainer>
   );
