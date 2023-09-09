@@ -23,16 +23,22 @@ export const ModalContainer = styled.div`
   padding: 15px;
   max-width: 320px;
   z-index: 100;
+  overflow-y: auto;
+  max-height: 80vh;
 
   border-radius: 24px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   @media (min-width: 768px) {
     padding: 30px;
     max-width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
   }
   @media (min-width: 1440px) {
     padding: 40px;
     max-width: 100%;
+    max-height: 1000vh;
+    overflow-y: auto;
   }
 `;
 
