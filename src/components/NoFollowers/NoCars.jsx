@@ -1,5 +1,5 @@
 import React from 'react';
-import myImage from 'images/pngwing.com.png';
+import myImage from 'images/carsSet.png';
 import {
   SectionContainer,
   NoFollowImg,

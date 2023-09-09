@@ -37,6 +37,7 @@ const Navigation = () => {
           </GoBackLink>
         )}
       </NavList>
+
     </Nav>
   );
 };

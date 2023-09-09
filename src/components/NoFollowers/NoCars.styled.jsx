@@ -5,22 +5,22 @@ export const SectionContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
 `;
 
 export const NoFollowImg = styled.img`
   display: block;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center center;
   @media (min-width: 768px) {
-    width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   }
   @media (min-width: 1440px) {
-    width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   }
 `;
 

@@ -133,7 +133,7 @@ export const HomeIcon = styled(BsFillCarFrontFill)`
 export const GoBackIcon = styled(FaArrowLeft)`
   width: 20px;
   height: 20px;
-  margin: 10px;
+  margin-left: 10px;
 
   padding: 10px;
 
