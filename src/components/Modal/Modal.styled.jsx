@@ -45,6 +45,7 @@ export const ModalContainer = styled.div`
   @media (min-width: 1440px) {
     top: 50%;
     padding: 40px;
+    overflow-y: hidden;
     max-width: 100%;
     max-height: 100%;
   }
