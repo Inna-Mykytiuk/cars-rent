@@ -58,7 +58,7 @@ export const GoBackLink = styled(NavLink)`
     svg {
       fill: white;
       border: 3px solid #fff;
-      box-shadow: rgb(188 221 244) 0px 0px 15px
+      box-shadow: rgb(188 221 244) 0px 0px 15px;
     }
   }
 `;
@@ -109,7 +109,7 @@ export const Link = styled(NavLink)`
     svg {
       fill: white;
       border: 3px solid #fff;
-      box-shadow: rgb(188 221 244) 0px 0px 15px
+      box-shadow: rgb(188 221 244) 0px 0px 15px;
     }
   }
 `;

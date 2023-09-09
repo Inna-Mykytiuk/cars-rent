@@ -108,7 +108,6 @@ export const HomeTextMain = styled.h1`
   line-height: 1.6;
   text-shadow: 1px 1px 2px #5c5757;
 
-
   @media (min-width: 768px) {
     font-size: 46px;
     line-height: 1.4;

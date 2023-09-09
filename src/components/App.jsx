@@ -5,7 +5,6 @@ import { useGetCarsQuery } from 'redux/usersSlice/slice';
 import TostContainer from './helpers/TostContainer';
 import NotFoundPage from 'pages/NotFoundPage';
 
-
 const Home = lazy(() => import('pages/Home'));
 const Catalogue = lazy(() => import('pages/Catalogue'));
 const Favorites = lazy(() => import('pages/Favorites'));
@@ -17,13 +16,13 @@ export const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home data={data}/>} />
+          <Route index element={<Home data={data} />} />
           <Route path="/catalog" element={<Catalogue data={data} />} />
           <Route path="/favorites" element={<Favorites data={data} />} />
         </Route>
-        <Route path="*" element={<NotFoundPage/>} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <TostContainer/>
+      <TostContainer />
     </>
   );
 };

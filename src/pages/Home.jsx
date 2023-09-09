@@ -7,7 +7,6 @@ import {
   BlueCarImg,
   HomeWrapper,
   ContentWrapper,
-  // ImageWrapper
 } from './Home.styled';
 
 import blueCar from 'images/blueCar.png';
@@ -22,9 +21,9 @@ const Home = ({ data }) => {
   return (
     <HomeSection>
       <HomeWrapper>
-        <BlueCarImg src={blueCar} alt="blue car" animated={isAnimated}/>
+        <BlueCarImg src={blueCar} alt="blue car" animated={isAnimated} />
         <ContentWrapper>
-        <Slider cars={data}/>
+          <Slider cars={data} />
           <HomeTextMain>
             Unlock the Road to Adventure with Our Car Rental Service!
           </HomeTextMain>

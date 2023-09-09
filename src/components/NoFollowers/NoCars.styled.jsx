@@ -5,7 +5,6 @@ export const SectionContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 `;
 
 export const NoFollowImg = styled.img`
@@ -15,12 +14,12 @@ export const NoFollowImg = styled.img`
   object-fit: cover;
   object-position: center center;
   @media (min-width: 768px) {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
   }
   @media (min-width: 1440px) {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -32,8 +31,9 @@ export const NoFollowText = styled.p`
   font-size: 24px;
   line-height: 1.2;
   color: #7b9ed9;
-  text-shadow: rgba(255, 255, 255, 0.1) -1px -1px 1px, rgba(0, 0, 0, 0.5) 1px 1px 1px;
-    text-shadow: 2px 2px 5px #1d1e26;
+  text-shadow: rgba(255, 255, 255, 0.1) -1px -1px 1px,
+    rgba(0, 0, 0, 0.5) 1px 1px 1px;
+  text-shadow: 2px 2px 5px #1d1e26;
   padding: 0;
   margin: 0;
 

@@ -14,7 +14,6 @@ export const FilterSectionContainer = styled.section`
   @media (min-width: 1440px) {
     padding: 50px 0px 80px;
   }
-
 `;
 
 export const InputsBlock = styled.div`
@@ -87,7 +86,6 @@ export const ModelOptionList = styled.ul`
   gap: 8px;
   width: 120px;
   margin-right: auto;
-
 `;
 
 export const ModelOptionListItem = styled.li`
@@ -209,7 +207,6 @@ export const PriceOptionList = styled.ul`
   gap: 8px;
   width: 120px;
   margin-right: auto;
-
 `;
 
 export const PriceOptionListItem = styled.li`
@@ -255,7 +252,7 @@ export const PriceInput = styled.input`
 
 //-------------MileageInput
 
-export const MileageInputWrapper= styled.div`
+export const MileageInputWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -350,6 +347,3 @@ export const SearchBtn = styled.button`
     padding: 13px 44px;
   }
 `;
-
-
-

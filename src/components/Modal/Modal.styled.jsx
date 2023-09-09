@@ -31,15 +31,22 @@ export const ModalContainer = styled.div`
   @media (min-width: 768px) {
     padding: 30px;
     max-width: 100%;
-    /* max-height: 80vh;
-    overflow-y: auto; */
+    max-height: 600px;
+    overflow-y: scroll;
+    top: 40%;
+  }
+  @media (max-width: 1080px) {
+    top: 50%;
+    padding: 30px;
+    max-width: 100%;
+    height: 600px;
+    overflow-y: scroll;
   }
   @media (min-width: 1440px) {
+    top: 50%;
     padding: 40px;
     max-width: 100%;
     max-height: 100%;
-    /* max-height: 1000vh;
-    overflow-y: auto; */
   }
 `;
 

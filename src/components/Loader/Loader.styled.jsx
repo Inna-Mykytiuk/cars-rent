@@ -50,5 +50,3 @@ export const Rect = styled.div`
   ${({ clipPath }) => `clip-path: ${clipPath};`}
   ${({ transition }) => `transition: ${transition};`}
 `;
-
-

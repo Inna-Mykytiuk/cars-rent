@@ -1,13 +1,10 @@
-import React, {useState, useEffect, useCallback} from 'react';
-// import { ThreeDots } from 'react-loader-spinner';
-
-// У файлі Loader.js
+import React, { useState, useEffect, useCallback } from 'react';
 import { LoaderContainer, Rect, Container } from './Loader.styled';
 
-const TIMER = 150; // Milliseconds between moving the next block
-const TRANSITION = 0.5; // Seconds to actually move one block
-const DEF_SIZE = 60; // Pixels height/width
-const GUTTER = 5; // Spacing in percentage between tiles
+const TIMER = 150;
+const TRANSITION = 0.5;
+const DEF_SIZE = 60;
+const GUTTER = 5;
 
 const initialState = {
   positions: {
@@ -25,14 +22,17 @@ const initialState = {
 const Loader = ({ size, style, center }) => {
   const [state, setState] = useState(initialState);
 
-  const positionForTile = useCallback((radioCommand) => {
-    for (const position in state.positions) {
-      const tile = state.positions[position];
-      if (tile === radioCommand) {
-        return position;
+  const positionForTile = useCallback(
+    radioCommand => {
+      for (const position in state.positions) {
+        const tile = state.positions[position];
+        if (tile === radioCommand) {
+          return position;
+        }
       }
-    }
-  }, [state]);
+    },
+    [state]
+  );
 
   const tileIndexToMove = useCallback(() => {
     switch (state.stateNumber) {
@@ -81,7 +81,7 @@ const Loader = ({ size, style, center }) => {
     };
   }, [setNextState]);
 
-  const clipPathForPosition = (position) => {
+  const clipPathForPosition = position => {
     position = parseInt(position, 10);
     const SIZE = (100 - 2 * GUTTER) / 3;
     const VAR0 = '0% ';
@@ -127,7 +127,7 @@ const Loader = ({ size, style, center }) => {
     <LoaderContainer style={styles} className={className}>
       <Container>
         {['alpha', 'bravo', 'charlie', 'delta', 'echo', 'foxtrot'].map(
-          (radioCommand) => {
+          radioCommand => {
             const pos = positionForTile(radioCommand);
             return (
               <Rect
@@ -144,4 +144,3 @@ const Loader = ({ size, style, center }) => {
 };
 
 export default Loader;
-
