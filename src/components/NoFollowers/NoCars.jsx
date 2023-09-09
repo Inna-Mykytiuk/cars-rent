@@ -1,5 +1,5 @@
 import React from 'react';
-import myImage from 'images/carsSet.png';
+import carSet from 'images/carsSet.png';
 import {
   SectionContainer,
   NoFollowImg,
@@ -10,7 +10,7 @@ const NoCars = () => {
   return (
     <SectionContainer>
       <NoFollowText>No cars avaible</NoFollowText>
-      <NoFollowImg src={myImage} alt="Моя картинка" />
+      <NoFollowImg src={carSet} alt="Моя картинка" />
     </SectionContainer>
   );
 };
