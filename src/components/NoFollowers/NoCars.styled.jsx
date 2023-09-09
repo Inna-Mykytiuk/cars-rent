@@ -38,7 +38,11 @@ export const NoFollowText = styled.p`
 
   @media (min-width: 768px) {
     font-size: 28px;
-    margin-top: 70px;
+    margin-top: 60px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 28px;
+    margin-top: 60px;
   }
   @media (min-width: 1440px) {
     font-size: 38px;
