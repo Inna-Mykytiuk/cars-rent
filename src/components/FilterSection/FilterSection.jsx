@@ -37,6 +37,7 @@ export const FilterSection = ({ data }) => {
   const [filteredCars, setFilteredCars] = useState([]);
   const [page, setPage] = useState(1);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [showNoCarsMessage, setShowNoCarsMessage] = useState(false); //
 
   useEffect(() => {
@@ -324,7 +325,6 @@ export const FilterSection = ({ data }) => {
         </SearchBtn>
       </InputsBlock>
       <CarList cars={paginatedCars} />
-      {showNoCarsMessage && <NoCars />}
       {filteredCars.length > 0 ? (
         totalPages !== page && <LoadMoreBtn onClick={getPage} />
       ) : (
