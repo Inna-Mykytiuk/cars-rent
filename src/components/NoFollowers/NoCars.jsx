@@ -10,7 +10,7 @@ const NoCars = () => {
   return (
     <SectionContainer>
       <NoFollowText>No cars available</NoFollowText>
-      <NoFollowImg src={carSet} alt="Моя картинка" />
+      <NoFollowImg src={carSet} alt="set Of Cars" />
     </SectionContainer>
   );
 };

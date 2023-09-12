@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';
 
-const slideInAnimation = keyframes`
+
+export const slideInAnimation = keyframes`
   from {
     transform: translateY(-100%);
     opacity: 0;
@@ -12,7 +13,7 @@ const slideInAnimation = keyframes`
   }
 `;
 
-const slideLeftAnimation = keyframes`
+export const slideLeftAnimation = keyframes`
   from {
     transform: translateX(100%);
     opacity: 0;
@@ -23,7 +24,7 @@ const slideLeftAnimation = keyframes`
   }
 `;
 
-const slideIn = css`
+export const slideIn = css`
   animation: ${slideInAnimation} 1s ease forwards;
 `;
 
@@ -87,7 +88,7 @@ export const ImageWrapper = styled.div`
 
 export const BlueCarImg = styled.img`
   display: block;
-  ${props => props.animated && slideIn}
+  /* ${props => props.animated && slideIn} */
 
   max-width: 50%;
 
@@ -105,15 +106,15 @@ export const HomeTextMain = styled.h1`
   color: #fff;
   font-weight: bold;
   font-size: 28px;
-  line-height: 1.6;
+  line-height: 1.4;
   text-shadow: 1px 1px 2px #5c5757;
 
   @media (min-width: 768px) {
-    font-size: 46px;
-    line-height: 1.4;
+    font-size: 42px;
+    line-height: 1.2;
   }
   @media (min-width: 1440px) {
-    font-size: 56px;
+    font-size: 42px;
     line-height: 1.2;
   }
 `;
@@ -122,15 +123,15 @@ export const HomeTextSecondary = styled.h2`
   color: #8392b6;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.2;
   text-shadow: 1px 1px 2px #b7b0b0;
 
   @media (min-width: 768px) {
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.4;
   }
   @media (min-width: 1440px) {
     font-size: 24px;
-    line-height: 1.8;
+    line-height: 1.4;
   }
 `;

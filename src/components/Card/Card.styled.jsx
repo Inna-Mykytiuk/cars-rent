@@ -54,7 +54,7 @@ export const CarText = styled.li`
 `;
 
 export const ModelBlue = styled.div`
-  color: #3470ff;
+  color: #872142;
   font-size: 16px;
 `;
 
@@ -105,7 +105,7 @@ export const LearnMoreBtn = styled.button`
   font-weight: 600;
   line-height: 20px;
   border-radius: 12px;
-  background: #3470ff;
+  background: #5a7aaf;
   border: none;
   cursor: pointer;
   outline: none;
@@ -114,7 +114,7 @@ export const LearnMoreBtn = styled.button`
 
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
-    background: #0b44cd;
+    background: #445c84;
   }
 
   @media (min-width: 768px) {

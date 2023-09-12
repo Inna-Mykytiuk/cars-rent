@@ -20,7 +20,7 @@ const NotFoundPage = () => {
           <ErrorTextErr>404</ErrorTextErr>
           <ErrorText>Page not Found</ErrorText>
           <HomeBtn onClick={() => navigate('/')}>BackHome</HomeBtn>
-          <ErrorImg src={myImage} alt="Моя картинка" />
+          <ErrorImg src={myImage} alt="page404" />
         </SectionContainer>
       </Container>
     </Wrapper>

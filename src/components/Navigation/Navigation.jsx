@@ -7,8 +7,12 @@ import {
   GoBackLink,
   GoBackIcon,
   NavBlock,
+  LogoWrapper,
+  LogoLink,
+  LogoText
 } from './Navigation.styled';
 import { useLocation } from 'react-router-dom';
+import carLogo from 'images/logo2.png';
 
 const Navigation = () => {
   const location = useLocation();
@@ -36,6 +40,13 @@ const Navigation = () => {
             <GoBackIcon />
           </GoBackLink>
         )}
+        <LogoLink to="/">
+        <LogoWrapper>
+        <img src={carLogo } alt="set Of Cars" width={60} height={40}/>
+        <LogoText>CRS</LogoText>
+        </LogoWrapper>
+        </LogoLink>
+
       </NavList>
     </Nav>
   );

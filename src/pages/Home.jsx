@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Slider } from 'components/Slider/Slider';
+import HeroSection from 'components/HeroSection/HeroSection';
+import Container from 'components/Container/Container';
 import {
   HomeSection,
   HomeTextMain,
@@ -19,22 +21,27 @@ const Home = ({ data }) => {
   }, []);
 
   return (
-    <HomeSection>
-      <HomeWrapper>
-        <BlueCarImg src={blueCar} alt="blue car" animated={isAnimated} />
-        <ContentWrapper>
-          <Slider cars={data} />
-          <HomeTextMain>
-            Unlock the Road to Adventure with Our Car Rental Service!
-          </HomeTextMain>
-          <HomeTextSecondary>
-            The ultimate solution for hassle-free car rentals! With a wide range
-            of vehicles to choose from, our user-friendly interface simplifies
-            the process of renting a car.
-          </HomeTextSecondary>
-        </ContentWrapper>
-      </HomeWrapper>
-    </HomeSection>
+    <>
+      <HeroSection />
+      <HomeSection>
+        <Container>
+          <HomeWrapper>
+            <BlueCarImg src={blueCar} alt="blue car" animated={isAnimated} />
+            <ContentWrapper>
+              <Slider cars={data} />
+              <HomeTextMain>
+                Unlock the Road to Adventure with Our Car Rental Service!
+              </HomeTextMain>
+              <HomeTextSecondary>
+                The ultimate solution for hassle-free car rentals! With a wide
+                range of vehicles to choose from, our user-friendly interface
+                simplifies the process of renting a car.
+              </HomeTextSecondary>
+            </ContentWrapper>
+          </HomeWrapper>
+        </Container>
+      </HomeSection>
+    </>
   );
 };
 
