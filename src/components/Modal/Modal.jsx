@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { RentalBtn } from 'components/Buttons/Buttons';
 
 import {
   ModalContainer,
@@ -20,7 +21,6 @@ import {
   Descriprion,
   AccessoryList,
   AccessoryListItem,
-  RentalBtn,
   RentalTitle,
   RentalItem,
   RentalInfo,
@@ -145,7 +145,7 @@ const Modal = ({
                 </RentalItem>
               </RentalInfo>
             </RentalBlock>
-            <RentalBtn href="tel:+380730000000">Rental car</RentalBtn>
+            <RentalBtn/>
           </InfoWrapper>
         </ContentWrapper>
       </ModalContainer>

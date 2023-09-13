@@ -1,4 +1,4 @@
-import { ButtonFollows, BtnFilter } from "./Buttons.styled";
+import { ButtonFollows, BtnFilter, RentalButton } from "./Buttons.styled";
 
 export const LoadMoreBtn = ({ onClick }) => (
   <ButtonFollows
@@ -21,3 +21,9 @@ export const ButtonFilter = ({
     </BtnFilter>
   );
 };
+
+export const RentalBtn = ({width}) => {
+  return(
+    <RentalButton href="tel:+380730000000" width={width}>Rental car</RentalButton>
+  )
+}
