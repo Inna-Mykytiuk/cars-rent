@@ -38,24 +38,23 @@ export const TopButton = styled.div`
 `;
 
 export const ToTopBtn = styled(FaRegArrowAltCircleUp)`
-  position: absolute;
-  display: flex;
+  /* position: absolute; */
+  display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   font-size: 40px;
 
-  @media screen and (max-width: 767px) {
-    font-size: 28px;
-  }
 
   @media screen and (min-width: 768px) {
     font-size: 35px;
+    display: flex;
   }
 
   @media screen and (min-width: 1200px) {
     font-size: 40px;
+    display: flex;
   }
 `;
 

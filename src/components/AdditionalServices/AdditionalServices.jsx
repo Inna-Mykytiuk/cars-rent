@@ -6,15 +6,14 @@ import {
   Face1,
   Face2,
   ServiceContent,
-  // Image,
   Title,
   Paragraph,
   ServiceCardWrapper,
-  ServiceImg
+  ServiceImg,
+  ServiceTitle
 } from './AdditionalServices.styled';
+
 import Container from 'components/Container/Container';
-// import services from 'images/services.png';
-// import services from '../helpers/services.json';
 import towing from 'images/serv/towing.svg'
 import fuel from 'images/serv/speed.svg'
 import tire from 'images/serv/tires.svg'
@@ -25,6 +24,7 @@ const AdditionalServices = () => {
   return (
     <ServicesSection>
       <Container>
+      <ServiceTitle>Additional Services</ServiceTitle>
         <ServiceCardWrapper>
 
             <ServiceCard >

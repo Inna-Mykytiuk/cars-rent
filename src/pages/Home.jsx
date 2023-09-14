@@ -34,7 +34,7 @@ const Home = ({ data }) => {
             <ContentWrapper>
               <Slider cars={data} />
               <HomeTextMain>
-                Unlock the Road to Adventure with Our Car Rental Service!
+                <span style={{color: '#5a7aaf'}}>Unlock the Road</span> to Adventure with Our Car Rental Service!
               </HomeTextMain>
               <HomeTextSecondary>
                 The ultimate solution for hassle-free car rentals! With a wide

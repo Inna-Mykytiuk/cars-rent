@@ -5,7 +5,7 @@ export const ServicesSection = styled.div`
   justify-content: center;
   align-items: center;
   margin: 30px 0;
-  padding: 30px 0;
+  padding: 30px 0 70px;
   background: #657396;
 
   background-repeat: no-repeat;
@@ -64,7 +64,7 @@ export const Face2 = styled.div`
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
   transform: translateY(-80px);
   transition: 1s;
   height: 80px;
@@ -89,9 +89,16 @@ export const ServiceContent = styled.div`
 export const ServiceCardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 30px;
+  @media (min-width: 768px) {
+    gap: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 50px;
+  }
 `;
 
 export const ServiceCard = styled.div`
@@ -101,7 +108,7 @@ export const ServiceCard = styled.div`
   height: 80px;
   transition: 0.5s;
   background: #333;
-  border-radius: 14px;
+  border-radius: 16px;
   transform: translateY(0);
 
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -219,5 +226,46 @@ export const Paragraph = styled.p`
   @media (min-width: 1440px) {
     display: block;
     font-size: 14px;
+  }
+`;
+
+export const ServiceTitle = styled.h1`
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px #5c5757;
+
+  margin-bottom: 40px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 1px;
+    background-color: #fff;
+    @media (min-width: 768px) {
+      left: 43%;
+      width: 120px;
+  }
+  @media (min-width: 1440px) {
+    left: 24%;
+    width: 180px;
+  }
+
+  }
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 50px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 50px;
   }
 `;
