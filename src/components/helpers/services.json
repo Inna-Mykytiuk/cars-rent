@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Fuel Delivery",
+    "image": "images/serv/towing.svg",
+    "description": "Ran out of fuel during your journey? Order a fuel delivery, and we'll supply the required amount of fuel directly to your vehicle, enabling you to cover those extra miles.",
+    "id": "1"
+  },
+  {
+    "name": "Towing",
+    "image": "../../images/serv/speed.png",
+    "description": "Encountered a major breakdown or accident? Our towing service is ready to transport your vehicle to the nearest service center or a location of your choice, ensuring the complete safety of your car.",
+    "id": "2"
+  },
+  {
+    "name": "Tire Service",
+    "image": "../../images/serv/speed.svg",
+    "description": "Need a tire replacement or repair during your trip? Our professional technicians will come to your rescue and swiftly address your tire-related issues, allowing you to continue your journey safely.",
+    "id": "3"
+  },
+  {
+    "name": "Car Washing",
+    "image": "../../images/serv/speed.svg",
+    "description": "Whether you need a quick rinse or a thorough wash, our professional car washers will ensure your car is clean and shining. Choose from our range of washing options to maintain that fresh and polished look during your trip.",
+    "id": "4"
+  },
+  {
+    "name": "Mobile Mechanic",
+    "image": "../../images/serv/speed.svg",
+    "description": "If you experience car troubles and require mechanical assistance, our qualified mobile mechanics will arrive at your location to diagnose and fix the issue promptly.",
+    "id": "5"
+  }
+]
