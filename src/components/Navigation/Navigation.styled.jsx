@@ -46,8 +46,15 @@ export const GoBackLink = styled(NavLink)`
   justify-content: center;
   align-items: center;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-left: auto;
+  margin-left: 0;
   margin-right: 10px;
+
+  @media (min-width: 768px) {
+    margin-left: 0;
+  }
+  @media (min-width: 1440px) {
+    margin-left: 30px;
+  }
   svg {
     fill: #7b9ed9;
   }
@@ -115,7 +122,7 @@ export const Link = styled(NavLink)`
     }
   }
 
-  @media (min-width: 450px) {
+  @media (min-width: 500px) {
     font-size: 20px;
   }
   @media (min-width: 1440px) {
@@ -188,6 +195,7 @@ export const LogoLink = styled(NavLink)`
   text-shadow: rgba(255, 255, 255, 0.1) -1px -1px 1px,
     rgba(0, 0, 0, 0.5) 1px 1px 1px;
   text-shadow: 2px 2px 5px #1d1e26;
+  margin-left: auto;
 
   &.active,
   &:hover,

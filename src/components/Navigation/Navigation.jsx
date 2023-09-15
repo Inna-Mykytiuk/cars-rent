@@ -35,17 +35,18 @@ const Navigation = () => {
             <Link to="/favorites">Favorites</Link>
           </NavListItem>
         </NavBlock>
-        {isCatalogOrFavoritePage && (
-          <GoBackLink to="/">
-            <GoBackIcon />
-          </GoBackLink>
-        )}
         <LogoLink to="/">
         <LogoWrapper>
         <img src={carLogo } alt="set Of Cars" width={60} height={40}/>
         <LogoText>CRS</LogoText>
         </LogoWrapper>
         </LogoLink>
+        {isCatalogOrFavoritePage && (
+          <GoBackLink to="/">
+            <GoBackIcon />
+          </GoBackLink>
+        )}
+
 
       </NavList>
     </Nav>

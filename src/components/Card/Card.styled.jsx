@@ -80,6 +80,7 @@ export const SecondaryInfo = styled.div`
   align-items: center;
   color: rgba(18, 20, 23, 0.5);
 
+
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -93,6 +94,7 @@ export const SecondaryCarText = styled.div`
   line-height: 18px;
   border-right: 1px solid rgba(18, 20, 23, 0.2);
   padding-right: 4px;
+  text-shadow: 0 0 1px #858994;
 `;
 
 export const LearnMoreBtn = styled.button`
