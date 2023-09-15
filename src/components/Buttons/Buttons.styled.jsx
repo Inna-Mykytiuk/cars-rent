@@ -47,7 +47,7 @@ export const ToTopBtn = styled(FaRegArrowAltCircleUp)`
   font-size: 40px;
 
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 450px) {
     font-size: 35px;
     display: flex;
   }

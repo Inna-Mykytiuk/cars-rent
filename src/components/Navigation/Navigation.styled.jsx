@@ -86,7 +86,7 @@ export const Link = styled(NavLink)`
   display: flex;
   font-family: 'Montserrat', sans-serif;
 
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.2;
   font-weight: 600;
   color: #7b9ed9;
@@ -113,6 +113,13 @@ export const Link = styled(NavLink)`
       border: 3px solid #fff;
       box-shadow: rgb(188 221 244) 0px 0px 15px;
     }
+  }
+
+  @media (min-width: 450px) {
+    font-size: 20px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 20px;
   }
 `;
 
