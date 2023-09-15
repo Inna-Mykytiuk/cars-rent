@@ -42,7 +42,6 @@ export const LogoWrapper = styled.div`
   width: 250px;
   height: 120px;
   position: relative;
-
 `;
 
 export const LogoText = styled.p`
@@ -76,7 +75,6 @@ export const ContactWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-
 `;
 
 export const ContactsTitle = styled.p`
@@ -99,9 +97,9 @@ export const ContactsTitle = styled.p`
 `;
 
 export const ContactsText = styled.did`
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 12px;
   line-height: 1;
   font-weight: 400;

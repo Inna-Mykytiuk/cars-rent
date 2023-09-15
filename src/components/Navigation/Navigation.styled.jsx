@@ -175,9 +175,6 @@ export const LogoWrapper = styled.div`
   height: 40px;
   display: none;
   position: relative;
-  /* @media (min-width: 550px) {
-    display: flex;
-  } */
   @media (min-width: 1440px) {
     display: flex;
   }
