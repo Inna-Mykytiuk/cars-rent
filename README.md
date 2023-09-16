@@ -1,6 +1,6 @@
 # Car Rental Service
 
-##
+####
 Welcome to Car Rental Service! Our app is your gateway to unlocking the road to adventure with hassle-free car rentals. Whether you're planning a weekend getaway or a long road trip, we've got you covered. Here's a breakdown of the key features and functionalities of our app:
 ##
 
